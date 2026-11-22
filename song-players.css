@@ -1,0 +1,15 @@
+
+.song-player-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px auto 0;max-width:900px}
+.song-player{background:#fffaf6;border:1px solid #ead5cc;border-radius:18px;padding:20px;box-shadow:0 12px 34px #8e615014;display:grid;grid-template-columns:42px 1fr;gap:10px 14px;align-items:center}
+.song-number{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#f4e5df;color:#986b63;font-size:12px;letter-spacing:.08em}
+.song-details h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin:0 0 3px;color:#674c47}
+.song-details p{margin:0;color:#a47c73;font-size:13px}
+.song-details small{display:block;margin-top:5px;color:#a47c73;font-size:11px}
+.song-player audio{grid-column:1/-1;width:100%;height:42px;accent-color:#b67870}
+.song-pending{opacity:.75}
+.song-pending .song-details small{font-style:italic}
+@media(max-width:650px){
+.song-player-grid{grid-template-columns:1fr;gap:12px}
+.song-player{padding:16px}
+.song-details h3{font-size:18px}
+}
