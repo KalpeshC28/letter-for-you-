@@ -1,10 +1,16 @@
 // Interactive details for the complete romantic experience.
 (() => {
-  // Switching to any playlist song pauses the opening soundtrack.
-  const backgroundSong = document.getElementById('background-song');
-  document.querySelectorAll('.song-player audio').forEach(player => {
-    player.addEventListener('play', () => {
-      if (backgroundSong && !backgroundSong.paused) backgroundSong.pause();
+  // Keep the soundtrack and playlist mutually exclusive on every device.
+  // A direct listener on each audio element avoids relying on delegated media events.
+  const allAudio = [...document.querySelectorAll('audio')];
+  allAudio.forEach(activeAudio => {
+    activeAudio.addEventListener('play', () => {
+      allAudio.forEach(otherAudio => {
+        if (otherAudio !== activeAudio && !otherAudio.paused) {
+          otherAudio.pause();
+          if (otherAudio.id === 'background-song') otherAudio.currentTime = 0;
+        }
+      });
     });
   });
 
