@@ -1,0 +1,32 @@
+name: Import soundtrack
+on:
+  push:
+    paths:
+      - ".github/workflows/import-soundtrack.yml"
+      - "index.html"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-audio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all six soundtrack files
+        run: |
+          mkdir -p audio
+          curl -fL "https://nhplpc.hatchable.site/something-stupid.mp3" -o audio/something-stupid.mp3
+          curl -fL "https://nhplpc.hatchable.site/playlist-track-5.mp3" -o audio/i-will.mp3
+          curl -fL "https://nhplpc.hatchable.site/playlist-track-4.mp3" -o audio/something.mp3
+          curl -fL "https://nhplpc.hatchable.site/playlist-track-1.mp3" -o audio/glue-song.mp3
+          curl -fL "https://nhplpc.hatchable.site/playlist-track-3.mp3" -o audio/cant-take-my-eyes-off-you.mp3
+          curl -fL "https://drive.usercontent.google.com/download?id=1sRbvJ95r3lbpC36l8v6ORAl9f_zC8jVv&export=download" -o audio/through.mp3
+          file audio/*.mp3
+          test "$(find audio -name '*.mp3' | wc -l)" -eq 6
+      - name: Commit audio into repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/*.mp3
+          git commit -m "Add all six soundtrack MP3 files" || echo "No audio changes to commit"
+          git push
