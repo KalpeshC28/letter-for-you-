@@ -48,7 +48,7 @@
   });
 
   const questions = [
-    { q: 'where did we first meet?', options: ['rishikesh', 'uttarakhand', 'instagram'], answer: 1, yes: 'yess. uttarakhand, january. the beginning of our favourite coincidence. ♡' },
+    { q: 'where did we first meet?', options: ['rishikesh', 'jim corbett', 'instagram'], answer: 1, yes: 'yess. uttarakhand, january. the beginning of our favourite coincidence. ♡' },
     { q: 'what did you ask me about at jim corbett?', options: ['the safari timing', 'gypsy seat allotments', 'the weather'], answer: 1, yes: 'you remembered. the legendary gypsy seat allotments. ✧' },
     { q: 'what made us start talking on instagram?', options: ['a mutual friend', 'a random follow', 'my phone’s ghost touch issue'], answer: 2, yes: 'exactly. that stubborn phone deserves a thank-you note. ♡' }
   ];
