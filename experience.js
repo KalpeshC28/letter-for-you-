@@ -1,5 +1,13 @@
 // Interactive details for the complete romantic experience.
 (() => {
+  // Switching to any playlist song pauses the opening soundtrack.
+  const backgroundSong = document.getElementById('background-song');
+  document.querySelectorAll('.song-player audio').forEach(player => {
+    player.addEventListener('play', () => {
+      if (backgroundSong && !backgroundSong.paused) backgroundSong.pause();
+    });
+  });
+
   // Every song is an independent native audio player.
   document.querySelectorAll('.song-player audio').forEach(player => {
     player.addEventListener('error', () => {
