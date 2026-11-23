@@ -1,4 +1,3 @@
-
 // Opening note and soft falling petals for Prachi's upgraded letter.
 const welcome=document.getElementById('welcome-screen');
 const openLetter=document.getElementById('open-letter');

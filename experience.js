@@ -1,4 +1,3 @@
-
 // Interactive details for the complete romantic experience.
 (() => {
   // Every song is an independent native audio player.
