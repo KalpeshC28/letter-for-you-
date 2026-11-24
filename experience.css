@@ -37,3 +37,10 @@
 .big-surprise-content{display:none;margin:20px auto 0;padding:25px 22px;background:#f7e9e3;border:1px solid #ead5cc;color:#8b625b}.big-surprise-content.show{display:block;animation:soft-rise .7s both}.big-surprise-content>span{font-size:25px;color:#b67870}.big-surprise-content h3{font:italic 23px 'Playfair Display',serif;color:#654640;margin:8px 0}.big-surprise-content p{font-size:13px;line-height:1.9}.big-surprise-content .forever-line{font:italic 19px 'Playfair Display',serif;color:#a66e68}
 @media(max-width:680px){.scrapbook-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 16px;max-width:460px}.scrap-tile figcaption{font-size:11px}.envelope-row{grid-template-columns:1fr;max-width:360px}.secret-envelope{min-height:125px}.star-map{height:250px}.quiz-card{padding:22px 18px}.cassette-player{gap:10px;padding:12px}.cassette-art{width:58px;flex-basis:58px;height:55px}.cassette-info strong{font-size:16px}.music-toggle{width:37px;height:37px;flex-basis:37px}}
 @media(prefers-reduced-motion:reduce){.scrap-tile,.secret-envelope,.star-point,.music-toggle,.big-surprise{transition:none!important}.big-surprise-content.show{animation:none}}
+/* dated milestones: the five moments that became our story */
+.timeline .gallery-intro{margin:0 auto;max-width:570px}
+.timeline-stop{padding-bottom:48px}
+.timeline-stop small{display:inline-block;margin-bottom:4px;font-size:10px;letter-spacing:.16em}
+.timeline-stop h3{font-size:clamp(21px,3vw,26px)}
+.timeline-promise{margin-top:12px!important;padding:13px 16px;border-left:2px solid #c99c92;background:#f5e9e3;color:#76564f!important}
+.timeline-closing{width:min(100%,690px);margin:0 auto;color:#a2766d;text-align:center;font:italic 20px/1.7 'Playfair Display',serif}
